@@ -7,7 +7,7 @@ export interface Response {
 
 export interface characResponse{
   ok: boolean;
-  characters: ICharacters;
+  characters: ICharacters[];
   error?:string;
   errors?:string[];
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ICharacters } from 'src/app/interfaces/characters';
+import { ICharacters, IResultados } from 'src/app/interfaces/characters';
 import { CharacterService } from 'src/app/services/character.service';
 
 
@@ -12,15 +12,25 @@ import { CharacterService } from 'src/app/services/character.service';
 })
 export class PersonajesComponent implements OnInit {
 
-  public characters: ICharacters[]=[];
+  public characters: ICharacters;
+  public imagenes: IResultados;
 
-  constructor( characService:CharacterService ) { }
+  constructor(private servicio: CharacterService,
+               ) { }
 
   ngOnInit(){
+    /* this.servicio.getData().subscribe(
+      charactersRes => this.characters = charactersRes,
+      error => console.error(error),
+      () => console.log("servicios cargados"));*/
 
-    
-
+      this.getListCh();
   }
+
+  getListCh(){
+    this.servicio.getXorizo().subscribe(charac=> console.log(charac));
+  }
+
 
 
 

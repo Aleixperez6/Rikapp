@@ -8,8 +8,8 @@ import { ICharacters } from 'src/app/interfaces/characters';
 })
 export class ItemComponent implements OnInit {
 
-  @Input() itemCharac:ICharacters;
   
+
 
 
   constructor() { }

@@ -5,19 +5,32 @@ import { Observable } from 'rxjs';
 
 
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class CharacterService {
 
-  private charactersUrl:string='https://rickandmortyapi.com/api/characters'
-
-
-
   constructor(private http: HttpClient) {}
+  /*
+  getData():Observable<ICharacters>{
+    return this.http.get<ICharacters>(this.charactersUrl+'?name');
+
+  }*/
+
+  getXorizo(){
+    const url_api = "/character";
+    return this.http.get(url_api);
+  }
+
+  getXorizo1(){
+    const url_api = "/character";
+    return this.http.get(url_api);
+  }
 
 
- 
+
+
 
 
 }

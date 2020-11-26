@@ -10,9 +10,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { ChardetailComponent } from './components/personajes/chardetail/chardetail.component';
 import { RouterModule } from '@angular/router';
 import { APP_ROUTES } from './app.routes';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ItemComponent } from './components/personajes/item/item.component';
+import { InterceptorService } from './interceptors/interceptor.service';
 
 
 
@@ -46,7 +47,11 @@ import { ItemComponent } from './components/personajes/item/item.component';
 
 
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: InterceptorService,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
