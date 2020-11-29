@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ICharacters } from 'src/app/interfaces/characters';
+import { IResultados } from 'src/app/interfaces/characters';
+import { CharacterService } from 'src/app/services/character.service';
+
 
 @Component({
   selector: 'app-item',
@@ -8,13 +10,15 @@ import { ICharacters } from 'src/app/interfaces/characters';
 })
 export class ItemComponent implements OnInit {
 
-  
+  character: IResultados;
 
 
 
-  constructor() { }
+  constructor(private servicios: CharacterService) { }
 
   ngOnInit(): void {
+
+
   }
 
 }

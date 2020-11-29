@@ -12,24 +12,44 @@ import { CharacterService } from 'src/app/services/character.service';
 })
 export class PersonajesComponent implements OnInit {
 
-  public characters: ICharacters;
-  public imagenes: IResultados;
+  public allData: ICharacters[]=[];
+
+
+
 
   constructor(private servicio: CharacterService,
                ) { }
 
-  ngOnInit(){
+  ngOnInit():void{
     /* this.servicio.getData().subscribe(
       charactersRes => this.characters = charactersRes,
       error => console.error(error),
-      () => console.log("servicios cargados"));*/
+      () => console.log("servicios cargados"));
 
-      this.getListCh();
+      getListCh(){
+    this.servicio.getData().subscribe(charac=> console.log(charac)
+    );
   }
 
-  getListCh(){
-    this.servicio.getXorizo().subscribe(charac=> console.log(charac));
+
+      )*/
+
+
+
+
+      this.servicio.getData().subscribe(data => console.log(data));
+
+
+
+
+
+
   }
+
+
+
+
+
 
 
 

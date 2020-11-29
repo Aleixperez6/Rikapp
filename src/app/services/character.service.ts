@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { ICharacters } from '../interfaces/characters';
+import { ICharacters, IResultados } from '../interfaces/characters';
 import { Observable } from 'rxjs';
+
 
 
 
@@ -11,6 +12,8 @@ import { Observable } from 'rxjs';
 })
 export class CharacterService {
 
+  private apiUrl:string = "character";
+
   constructor(private http: HttpClient) {}
   /*
   getData():Observable<ICharacters>{
@@ -18,17 +21,16 @@ export class CharacterService {
 
   }*/
 
-  getXorizo(){
-    const url_api = "/character";
-    return this.http.get(url_api);
+  getData():Observable<ICharacters>{
+     return this.http.get<ICharacters>(this.apiUrl);
   }
 
-  getXorizo1(){
-    const url_api = "/character";
-    return this.http.get(url_api);
+  getCharacter(idCharacter:number):Observable<IResultados>{
+    return this.http.get<IResultados>(this.apiUrl+"/"+idCharacter)
   }
 
 
+  
 
 
 

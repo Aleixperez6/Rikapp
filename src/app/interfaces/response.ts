@@ -1,13 +1,8 @@
-import { ICharacters } from './characters';
+import { ICharacters, IResultados } from './characters';
 
 export interface Response {
-  characters: ICharacters[];
+  results: IResultados[];
   ok: boolean;
 }
 
-export interface characResponse{
-  ok: boolean;
-  characters: ICharacters[];
-  error?:string;
-  errors?:string[];
-}
+

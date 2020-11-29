@@ -1,25 +1,27 @@
 
   <nav class="navbar justify-content-around mt-5 mb-5 ">
 
-    <form [formGroup]="" class="form-inline" novalidate>
+    <form  class="form-inline" novalidate>
       <input class="form-control mr-sm-2" type="text" name="filterDesc" id="filterDesc"
         placeholder="Filtrar por nombre">
     </form>
-    <form [formGroup]="" class="form-inline">
+    <form  class="form-inline">
       <input class="form-control mr-sm-2" type="text" name="filterDesc" id="filterDesc"
         placeholder="Filtrar por especies">
     </form>
-    <form [formGroup]=""  class="form-inline">
+    <form  class="form-inline">
       <input class="form-control mr-sm-2" type="text" name="filterDesc" id="filterDesc"
         placeholder="Filtrar por estado">
     </form>
   </nav>
 
 
-  <div class="card-columns mt-5" *ngIf="">
+  <div class="card-columns mt-5" *ngIf="allData; then noCharacters">
 
     <!-- Repetir esto por cada evento -->
-  <app-item class="card" *ngFor="let character of characters" >
+  <app-item class="card" *ngFor="let character of allData" >
+
+
   </app-item>
 
 </div>

@@ -2,9 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { PersonajesComponent } from './components/personajes/personajes.component';
 import { SocialComponent } from './components/social/social.component';
-import { ContactoComponent } from './components/contacto/contacto.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { ChardetailComponent } from './components/personajes/chardetail/chardetail.component';
@@ -14,6 +12,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ItemComponent } from './components/personajes/item/item.component';
 import { InterceptorService } from './interceptors/interceptor.service';
+import { PersonajesComponent } from './components/personajes/personajes.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
 
 
 
@@ -24,9 +24,9 @@ import { InterceptorService } from './interceptors/interceptor.service';
     HomeComponent,
     PersonajesComponent,
     SocialComponent,
-    ContactoComponent,
-    ChardetailComponent,
     ItemComponent,
+    ChardetailComponent,
+    ContactoComponent,
 
 
 
@@ -39,8 +39,9 @@ import { InterceptorService } from './interceptors/interceptor.service';
     RouterModule,
     RouterModule.forRoot(APP_ROUTES),
     HttpClientModule,
+    FormsModule,
     ReactiveFormsModule,
-    FormsModule
+
 
 
 
