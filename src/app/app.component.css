@@ -1,10 +1,16 @@
 .logo{
   color: #00E59B;
+  border-right: 1px solid #444;
+  border-right-style:solid;
+  border-width:thin;
+  padding-right: 10px;
 }
+
 .nav-link{
   color: black;
 }
 .clor{
   border-bottom: 3px solid #00E59B;
+  
 }
 

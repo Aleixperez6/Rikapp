@@ -1,6 +1,6 @@
 export interface ICharacters {
   info:any;
-  results:any;
+  results:IResultados[];
 }
 
 export interface IResultados {

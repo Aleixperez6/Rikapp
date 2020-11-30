@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ICharacters, IResultados } from 'src/app/interfaces/characters';
+import { IResultados } from 'src/app/interfaces/characters';
 import { CharacterService } from 'src/app/services/character.service';
 
 
@@ -12,32 +12,23 @@ import { CharacterService } from 'src/app/services/character.service';
 })
 export class PersonajesComponent implements OnInit {
 
-  public allData: ICharacters[]=[];
-
-
-
+  public allData: IResultados[]=[];
 
   constructor(private servicio: CharacterService,
                ) { }
 
   ngOnInit():void{
-    /* this.servicio.getData().subscribe(
-      charactersRes => this.characters = charactersRes,
-      error => console.error(error),
-      () => console.log("servicios cargados"));
 
-      getListCh(){
-    this.servicio.getData().subscribe(charac=> console.log(charac)
+
+    this.servicio.getData().subscribe(
+      respData => this.allData= respData,
+      error => console.log(error),
+      () => console.log("characers charged")
     );
-  }
+
+    this.servicio.getData().subscribe(data => console.log(data));
 
 
-      )*/
-
-
-
-
-      this.servicio.getData().subscribe(data => console.log(data));
 
 
 

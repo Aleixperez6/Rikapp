@@ -1,7 +1,7 @@
 import { ICharacters, IResultados } from './characters';
 
 export interface Response {
-  results: IResultados[];
+  results: ICharacters[];
   ok: boolean;
 }
 

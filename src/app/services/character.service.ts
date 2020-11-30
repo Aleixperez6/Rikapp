@@ -21,16 +21,21 @@ export class CharacterService {
 
   }*/
 
-  getData():Observable<ICharacters>{
-     return this.http.get<ICharacters>(this.apiUrl);
-  }
-
-  getCharacter(idCharacter:number):Observable<IResultados>{
-    return this.http.get<IResultados>(this.apiUrl+"/"+idCharacter)
+  getData():Observable<ICharacters['results']>{
+     return this.http.get<ICharacters['results']>(this.apiUrl);
   }
 
 
-  
+
+
+
+
+
+
+
+
+
+
 
 
 
