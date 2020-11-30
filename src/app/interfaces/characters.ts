@@ -9,6 +9,7 @@ export interface IResultados {
   status:string;
   species:string;
   image:string;
+  location: {name:string};
 }
 
 

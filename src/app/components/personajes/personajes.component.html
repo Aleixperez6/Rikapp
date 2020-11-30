@@ -1,33 +1,32 @@
+<nav class="navbar justify-content-around mt-5 mb-5 ">
 
-  <nav class="navbar justify-content-around mt-5 mb-5 ">
-
-    <form  class="form-inline" novalidate>
-      <input class="form-control mr-sm-2" type="text" name="filterDesc" id="filterDesc"
-        placeholder="Filtrar por nombre">
-    </form>
-    <form  class="form-inline">
-      <input class="form-control mr-sm-2" type="text" name="filterDesc" id="filterDesc"
-        placeholder="Filtrar por especies">
-    </form>
-    <form  class="form-inline">
-      <input class="form-control mr-sm-2" type="text" name="filterDesc" id="filterDesc"
-        placeholder="Filtrar por estado">
-    </form>
-  </nav>
+  <form class="form-inline" novalidate>
+    <input class="form-control mr-sm-2" type="text" [(ngModel)]="filterSearch" name="filterName" id="filterName"
+      placeholder="Filtrar por nombre">
+  </form>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="text" [(ngModel)]="filterSpecies" name="filterSpecies" id="filterSpecies"
+      placeholder="Filtrar por especies">
+  </form>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="text" [(ngModel)]="filterStatus" name="filterStatus" id="filterStatus"
+      placeholder="Filtrar por estado">
+  </form>
+</nav>
 
 
-  <div class="card-columns mt-5" *ngIf="allData; then noCharacters">
+<div class="container mt-5" *ngIf="allData; else noCharacters">
 
-    <!-- Repetir esto por cada evento -->
-  <app-item class="card" *ngFor="let character of allData" >
+
+  <app-item class=""
+    *ngFor="let character of allData | characterFilter:filterSearch | characterFilterSpecies:filterSpecies | characterFilterStatus:filterStatus"
+    [character]="character">
 
 
   </app-item>
 
 </div>
 
-<ng-template #noCharacters >
-<h3>No hay personajes disponibles</h3>
+<ng-template #noCharacters>
+  <h3>No hay personajes disponibles</h3>
 </ng-template>
-
-

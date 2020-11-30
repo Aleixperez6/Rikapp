@@ -14,6 +14,10 @@ export class PersonajesComponent implements OnInit {
 
   public allData: IResultados[]=[];
 
+  filterSearch:string="";
+  filterSpecies:string="";
+  filterStatus:string="";
+
   constructor(private servicio: CharacterService,
                ) { }
 
@@ -21,12 +25,12 @@ export class PersonajesComponent implements OnInit {
 
 
     this.servicio.getData().subscribe(
-      respData => this.allData= respData,
+      respData => this.allData = respData['results'],
       error => console.log(error),
-      () => console.log("characers charged")
+      () => console.log(this.allData)
     );
 
-    this.servicio.getData().subscribe(data => console.log(data));
+
 
 
 

@@ -14,6 +14,7 @@ import { ItemComponent } from './components/personajes/item/item.component';
 import { InterceptorService } from './interceptors/interceptor.service';
 import { PersonajesComponent } from './components/personajes/personajes.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
+import { CharacterFilterPipe, CharacterFilterPipeSpecies, CharacterFilterPipeStatus } from './pipes/character-filter.pipe';
 
 
 
@@ -27,6 +28,10 @@ import { ContactoComponent } from './components/contacto/contacto.component';
     ItemComponent,
     ChardetailComponent,
     ContactoComponent,
+    CharacterFilterPipe,
+    CharacterFilterPipeSpecies,
+    CharacterFilterPipeStatus
+
 
 
 

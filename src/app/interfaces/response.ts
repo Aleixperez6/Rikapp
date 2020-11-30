@@ -1,4 +1,4 @@
-import { ICharacters, IResultados } from './characters';
+import { ICharacters } from './characters';
 
 export interface Response {
   results: ICharacters[];

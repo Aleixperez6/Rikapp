@@ -10,7 +10,7 @@ import { CharacterService } from 'src/app/services/character.service';
 })
 export class ItemComponent implements OnInit {
 
-  character: IResultados;
+  @Input() character: IResultados;
 
 
 
@@ -18,7 +18,7 @@ export class ItemComponent implements OnInit {
 
   ngOnInit(): void {
 
-
+    console.log(this.character);
   }
 
 }
