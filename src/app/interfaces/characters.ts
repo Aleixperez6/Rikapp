@@ -1,5 +1,5 @@
 export interface ICharacters {
-  info:any;
+  info: Info;
   results:IResultados[];
 }
 
@@ -10,6 +10,12 @@ export interface IResultados {
   species:string;
   image:string;
   location: {name:string};
+  gender:string;
+}
+
+export interface Info {
+  pages: number;
+  count:number;
 }
 
 

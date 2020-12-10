@@ -1,0 +1,21 @@
+<mat-nav-list>
+  <a mat-list-item (click)="onsidenavClose()" [routerLink]="['/home']" >
+    <mat-icon>pan_tool</mat-icon>
+    <span>Home</span>
+  </a>
+
+  <a mat-list-item (click)="onsidenavClose()" [routerLink]="['/characters']">
+    <mat-icon>dashboard</mat-icon>
+    <span>Characters</span>
+  </a>
+
+  <a mat-list-item (click)="onsidenavClose()" [routerLink]="['/social']">
+    <mat-icon>view_list</mat-icon>
+    <span>Social</span>
+  </a>
+
+  <a mat-list-item (click)="onsidenavClose()" [routerLink]="['/contacto']">
+    <mat-icon>settings_phone</mat-icon>
+    <span>Contact</span>
+  </a>
+</mat-nav-list>

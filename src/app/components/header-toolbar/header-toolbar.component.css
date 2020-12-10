@@ -1,0 +1,25 @@
+.nav-item{
+  list-style: none;
+}
+
+a:hover, a:active{
+  color:lightgray;
+}
+
+a{
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+}
+.clor{
+  color:  #00E59B;
+}
+
+.logo{
+  color: #00E59B;
+  padding-right: 20px;
+}
+.activ{
+  border-bottom: 4px solid #00E59B;
+  padding-bottom: 15px;
+}

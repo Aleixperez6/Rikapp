@@ -18,7 +18,7 @@ export class InterceptorService implements HttpInterceptor {
 
 
     })
-    console.log("has pasado");
+    
     return next.handle(reqClone);
 
   }

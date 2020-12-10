@@ -1,16 +1,7 @@
-.logo{
-  color: #00E59B;
-  border-right: 1px solid #444;
-  border-right-style:solid;
-  border-width:thin;
-  padding-right: 10px;
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+  height: 100vh;
 }
 
-.nav-link{
-  color: black;
+mat-sidenav{
+  width: 250px;
 }
-.clor{
-  border-bottom: 3px solid #00E59B;
-  
-}
-

@@ -12,13 +12,18 @@ export class ItemComponent implements OnInit {
 
   @Input() character: IResultados;
 
+  toggleProperty = false;
+
 
 
   constructor(private servicios: CharacterService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
 
-    console.log(this.character);
+  toggle(){
+    this.toggleProperty = !this.toggleProperty;
   }
+
+
 
 }

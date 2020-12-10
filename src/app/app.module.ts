@@ -4,8 +4,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { SocialComponent } from './components/social/social.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
-import { ChardetailComponent } from './components/personajes/chardetail/chardetail.component';
 import { RouterModule } from '@angular/router';
 import { APP_ROUTES } from './app.routes';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -15,6 +13,12 @@ import { InterceptorService } from './interceptors/interceptor.service';
 import { PersonajesComponent } from './components/personajes/personajes.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { CharacterFilterPipe, CharacterFilterPipeSpecies, CharacterFilterPipeStatus } from './pipes/character-filter.pipe';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { MaterialModule } from './material/material/material.module';
+import { SideNavComponent } from './components/side-nav/side-nav.component';
+import { HeaderToolbarComponent } from './components/header-toolbar/header-toolbar.component';
+import { BackItemComponent } from './components/personajes/item/back-item';
+import { FrontItemComponent } from './components/personajes/item/front-item';
 
 
 
@@ -26,26 +30,26 @@ import { CharacterFilterPipe, CharacterFilterPipeSpecies, CharacterFilterPipeSta
     PersonajesComponent,
     SocialComponent,
     ItemComponent,
-    ChardetailComponent,
     ContactoComponent,
     CharacterFilterPipe,
     CharacterFilterPipeSpecies,
-    CharacterFilterPipeStatus
-
-
-
-
+    CharacterFilterPipeStatus,
+    SideNavComponent,
+    HeaderToolbarComponent,
+    BackItemComponent,
+    FrontItemComponent,
 
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule,
+    MaterialModule,
     RouterModule,
     RouterModule.forRoot(APP_ROUTES),
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    InfiniteScrollModule
 
 
 

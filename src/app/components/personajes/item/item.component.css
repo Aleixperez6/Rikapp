@@ -1,12 +1,145 @@
 
+.cardd{
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-.imgn{
-  width:200px;
-  height:200px;
-  border-radius:50%;
+}
+
+.cardd .front,
+.cardd .back{
+  backface-visibility: hidden;
+}
+
+.back{
+  transform: rotateY(180deg);
+}
+.flipped{
+  transform: rotateY(180deg);
+}
+.card-ch{
+  max-width: 400px;
+  max-height: 600px;
 }
 
 
-#box:hover #box{
-  opacity: 0,5 white;
+.circular{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+
+}
+
+.mat-card-title{
+  font-size: 16px;
+}
+
+.portal{
+background-image: url(img/portal.png);
+background-size: cover;
+}
+.portal2{
+  background-image: url(img/rick-app-logo.png);
+  background-size: 100%;
+  }
+
+.mat-raised-button{
+  background-color: #403b5388;
+  color: white;
+
+}
+
+.mat-raised-button:hover{
+  background-color: #403B53;
+
+}
+
+
+.backend{
+  background-color: #403C54;
+  color: #EC5E9A;
+  border: inset 4px #be5480 ;
+}
+.text-upp{
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 25pt;
+}
+.reality{
+  background-color: rgb(240, 240, 240);
+}
+.prevv{
+  color: rgb(163, 163, 163);
+  font-weight: 300;
+  font-size: 18px;
+}
+.sbt{
+  color:#EC5E9A ;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+/*
+.mat-card{
+  background-color: #403B53;
+  color: #EC5E9A;
+}*/
+
+.glitName{
+    animation: glitch 1s linear infinite;
+}
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(2deg);
+  }
+}
+.glitName:before,
+.glitName:after{
+  content: attr(title);
+  position: absolute;
+  left: 0;
+
+
+}
+.glitName:before{
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,1px);
+
+  }
+  4%,60%{
+    transform: translate(1px,2px);
+
+  }
+  62%{
+    transform: translate(-10px,5px) skew(-1deg);
+
+  }
+}
+.glitName:after{
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-5px,5px) skew(5deg);
+    color: rgba(0, 255, 242, 0.404);
+  }
 }

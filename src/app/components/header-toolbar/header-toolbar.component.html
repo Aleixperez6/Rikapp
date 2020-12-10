@@ -1,0 +1,19 @@
+<mat-toolbar fxFlex fxLayoutAlign="space-between center">
+  <div fxHide.gt-sm>
+    <button (click)="onToggleSidenav()">Menú</button>
+  </div>
+  <div fxFlex fxLayout="end" fxHide.lt-md>
+    <ul fxLayout fxLayoutGap="20px" class="nav-item">
+      <li><a class="logo" [routerLink]="['/home']">Logo </a> </li>
+      <li> <a [routerLink]="['/home']" routerLinkActive="activ">Home </a> </li>
+      <li> <a [routerLink]="['/characters']" routerLinkActive="activ">Characters </a> </li>
+      <li> <a [routerLink]="['/social']" routerLinkActive="activ">Social </a> </li>
+      <li> <a [routerLink]="['/contacto']" routerLinkActive="activ">Contacto</a> </li>
+    </ul>
+  </div>
+
+  <div fxLayout fxLayoutGap="10px">
+    <mat-icon>dashboard</mat-icon>
+    <mat-icon>dashboard</mat-icon>
+  </div>
+</mat-toolbar>
