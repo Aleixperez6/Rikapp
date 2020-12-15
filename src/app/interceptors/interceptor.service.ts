@@ -15,10 +15,8 @@ export class InterceptorService implements HttpInterceptor {
   Observable<HttpEvent<ICharacters['results']>>{
     const reqClone=request.clone({
       url:environment.baseUrl+'/'+request.url
+    });
 
-
-    })
-    
     return next.handle(reqClone);
 
   }

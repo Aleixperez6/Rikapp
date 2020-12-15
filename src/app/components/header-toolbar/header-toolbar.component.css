@@ -1,3 +1,8 @@
+mat-toolbar{
+  background-color: #FAFAFA;
+
+}
+
 .nav-item{
   list-style: none;
 }
@@ -20,6 +25,18 @@ a{
   padding-right: 20px;
 }
 .activ{
-  border-bottom: 4px solid #00E59B;
-  padding-bottom: 15px;
+  color: #7fc4e2;
+  padding-bottom: 13px;
+}
+
+.menu-button{
+  background-color: #7fc4e2;
+  color: rgb(250, 250, 250);
+}
+.rikap{
+  font-size: 21px;
+  font-weight: bold;
+  color: #7fc4e2;
+  padding-top: 10px;
+  font-family: 'Raleway';
 }

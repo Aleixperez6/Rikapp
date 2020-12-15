@@ -12,7 +12,7 @@ export const APP_ROUTES: Route[] = [
     { path: 'characters', component: PersonajesComponent },
     { path: 'social', component: SocialComponent },
     { path: 'contacto', component: ContactoComponent },
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: '**', redirectTo: '/home', pathMatch: 'full' }
+    { path: '', redirectTo: '/characters', pathMatch: 'full' },
+    { path: '**', redirectTo: '/characters', pathMatch: 'full' }
 
   ];

@@ -1,0 +1,31 @@
+.social{
+  width: 100%;
+  height: auto;
+  background-image: url(social-bg2.png);
+  background-size: cover;
+  text-align: left;
+  color: rgb(22, 22, 22);
+  font-family: 'Raleway';
+  margin: auto;
+}
+.title{
+  font-family: 'Raleway';
+  font-size: 26px;
+}
+.text{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.card{
+  max-width: 350px;
+  height: auto;
+}
+.circular{
+  border-radius: 50%;
+  width: 40px;
+}
+
+.text-content{
+  text-align: left;
+}

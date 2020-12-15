@@ -1,1 +1,57 @@
-<p>social works!</p>
+<div class="social m-auto" fxLayout="row wrap">
+
+  <div class=" col-xl-6 col-md-11 col-sm-12 m-auto  pt-5 p-5 ">
+    <h1 class="title pb-3">Ésta sección está <span> EN CAMINO</span> </h1>
+    <p class="text">Estamos trabajando en la creación de una comunidad de fans de la serie en la que podréis compartir
+      todo tipo de
+      contenido relacionado con Rick y Morty.<br>
+      En ésta sección podrás compartir imágenes, texto y vídeos. El objetivo es interactuar con otros usuarios.
+    </p>
+    <br><br>
+    <p class="text" >Si tienes alguna recomendación para el funcionamiento del apartado social o tienes alguna pregunta puedes contactar con nosotros a través del formulario </p>
+    <p class="text font-weight-bold">A continuación os dejamos una visual de un post de Elena, una gran artista y fan de la serie.</p>
+
+    <a [routerLink]="['/contacto']">
+      <button class="btn btn-primary mt-5">Formulario</button>
+    </a>
+
+
+    <div fxLayoutAlign="end start" class="pb-4">
+      <img fxLayoutAlign="end" src="./assets/nave.png" width="200px">
+    </div>
+
+
+
+
+  </div>
+
+  <div class="design col-xl-6 col-md-11 col-sm-12 col-xs-12 mt-4">
+
+    <div fxLayoutAlign="center end" class="card m-auto">
+      <mat-card  class="card-ch mat-elevation-24 ">
+        <mat-card-header fxLayoutAlign="start center" class="pl-3">
+          <div mat-card-avatar class="avatar">
+            <img mat-card-image class="circular" width="30px" src="./assets/rick-app-logo.png">
+          </div>
+          <mat-card-title> elenang_art </mat-card-title>
+          <mat-card-subtitle> Barcelona </mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="./assets/image0.png" alt="Morty Fan-Art">
+        <mat-card-content>
+          <p class="text-content"> <strong>elenang_art</strong> Os presento mi último trabajo, espero que os guste!</p>
+        </mat-card-content>
+        <mat-card-actions fxLayoutAlign="end center" fxLayoutGap="10px">
+          <mat-icon>share</mat-icon>
+          <mat-icon>favorite</mat-icon>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+
+
+
+
+
+
+
+  </div>

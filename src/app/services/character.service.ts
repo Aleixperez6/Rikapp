@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { ICharacters, IResultados } from '../interfaces/characters';
+import { ICharacters } from '../interfaces/characters';
 import { Observable } from 'rxjs';
+import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore'
+import {MessageI } from '../interfaces/message.interface'
+
 
 
 
@@ -12,13 +15,12 @@ import { Observable } from 'rxjs';
 export class CharacterService {
 
   private apiUrl:string = "character";
+  private contactCollection: AngularFirestoreCollection<MessageI>;
 
-
-
-
-
-
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,
+              private afs: AngularFirestore) {
+                this.contactCollection = afs.collection<MessageI>('contacts');
+              }
 
   getData():Observable<ICharacters['results']>{
      return this.http.get<ICharacters['results']>(this.apiUrl);
@@ -32,6 +34,9 @@ export class CharacterService {
   getCharactersFilter(name:string):Observable<ICharacters>{
     const requestUrl= this.apiUrl+ '?=name'+(name)
     return this.http.get<ICharacters>(requestUrl);
+  }
+  saveMessage( newContact: MessageI ):void {
+    this.contactCollection.add(newContact);
   }
 
 

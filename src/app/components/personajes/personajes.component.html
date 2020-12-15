@@ -28,7 +28,8 @@
 
 <div class="cont container-fluid matindex  mt-3 m-auto" fxLayout="row wrap" fxLayoutAlign="center center"
   *ngIf="allData; else noCharacters">
-  <app-item class=" p-3" *ngFor="let character of allData | characterFilter:filterSearch | characterFilterSpecies:filterSpecies | characterFilterStatus:filterStatus"
+  <app-item class="p-3"
+    *ngFor="let character of allData | characterFilter:filterSearch | characterFilterSpecies:filterSpecies | characterFilterStatus:filterStatus"
     [character]="character">
 
   </app-item>

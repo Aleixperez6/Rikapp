@@ -1,67 +1,79 @@
-<div class="container">
-<h1 class="mt-5">Contacta con nosotros</h1>
-<h3> "" </h3>
-<form class="mt-5" [formGroup]="contactForm" (ngSubmit)="sendForm()" novalidate>
+<div class="content">
 
-  <div class="form-group-row">
-    <label class="col-sm-4 col-form-label text-sm-left">Nombre completo</label>
-    <div class="col-sm-12">
-      <input type="text" class="form-control " formControlName="name" placeholder="Type your name...">
-      <div *ngIf="name.invalid && (name.dirty || name.touched)">
-        <div class="text-danger" *ngIf="name.errors.required">
-          Type your name, please
-        </div>
-        <div class="text-danger" *ngIf="name.errors.minlength">
-          Your name must have 5 characters
+  <div class="container2 col-xl-8 col-md-10 col-sm-12 p-4 ">
+    <h1 class="mt-5 pl-2 font-weight-bold">Contacta con nosotros</h1>
+    <h3 class="pl-2"> Aquí puedes dejarnos una recomendación, solicitar una colaboración o notificar errores de la
+      aplicación. </h3>
+
+
+    <form class="mt-5" [formGroup]="contactForm" (ngSubmit)="sendForm()" novalidate>
+
+      <div class="form-group-row mb-3">
+        <label class="col-sm-4 col-form-label text-sm-left font-weight-bold">Nombre completo</label>
+        <div class="col-sm-12">
+          <input type="text" class="form-control inputt " formControlName="name" placeholder="Type your name...">
+          <div *ngIf="name.invalid && (name.dirty || name.touched)">
+            <div class="text-danger" *ngIf="name.errors.required">
+              Type your name, please
+            </div>
+            <div class="text-danger" *ngIf="name.errors.minlength">
+              Your name must have 5 characters
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="form-group-row">
-    <label class="col-sm-1 col-form-label text-sm-left">Email</label>
-    <div class="col-sm-12">
-      <input type="text" class="form-control " formControlName="email" placeholder="Type your email">
-      <div *ngIf="email.invalid && (email.dirty || email.touched)">
-        <div class="text-danger" *ngIf="email.errors.required">
-          Type your email, please
-        </div>
-        <div class="text-danger" *ngIf="email.errors.pattern">
-          Tipe your email with a valid format
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="form-group-row">
-    <label class="col-sm-1 col-form-label text-sm-left">Message</label>
-    <div class="col-sm-12">
-      <textarea class="form-control " formControlName="message" placeholder="Type your message"></textarea>
-      <div *ngIf="message.invalid && (message.dirty || message.touched)">
-        <div class="text-danger" *ngIf="message.errors.required">
-          Type your message, please
-        </div>
-        <div class="text-danger" *ngIf="message.errors.minlength">
-          Your message must have 5 characters minimum
+      <div class="form-group-row mb-3">
+        <label class="col-sm-1 col-form-label text-sm-left font-weight-bold">Email</label>
+        <div class="col-sm-12">
+          <input type="text" class="form-control inputt  " formControlName="email" placeholder="Type your email">
+          <div *ngIf="email.invalid && (email.dirty || email.touched)">
+            <div class="text-danger" *ngIf="email.errors.required">
+              Type your email, please
+            </div>
+            <div class="text-danger" *ngIf="email.errors.pattern">
+              Tipe your email with a valid format
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="form-group-row mt-3 ">
-    <label class="col-sm-10 col-form-label text-sm-left "><input class="mr-2" type="checkbox"
-        formControlName="terms">Click to accept the terms and conditions of rikapp.</label>
-    <div class="col-sm-12">
-      <div class="col-sm-4 text-danger" *ngIf="terms.errors?.required">
-        You must accept our T&C
+      <div class="form-group-row">
+        <label class="col-sm-1 col-form-label text-sm-left font-weight-bold">Message</label>
+        <div class="col-sm-12">
+          <textarea class="form-control inputt " formControlName="message" placeholder="Type your message"></textarea>
+          <div *ngIf="message.invalid && (message.dirty || message.touched)">
+            <div class="text-danger" *ngIf="message.errors.required">
+              Type your message, please
+            </div>
+            <div class="text-danger" *ngIf="message.errors.minlength">
+              Your message must have 5 characters minimum
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="form-group-row">
-    <div class="col-sm-12">
-      <button type="submit" class="btn btn-success mt-3" [disabled]="contactForm.invalid">Enviar</button>
-    </div>
+      <div class="form-group-row mt-3 ">
+        <label class="col-sm-10 col-form-label text-sm-left font-weight-bold"><input class="mr-2" type="checkbox"
+            formControlName="terms">Click to accept the terms and conditions of rikapp.</label>
+        <div class="col-sm-12">
+          <div class="col-sm-4 text-danger"
+            *ngIf="terms.errors?.required && (name.touched && email.touched && message.touched)">
+            You must accept our T&C
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group-row">
+        <div class="col-sm-12">
+          <button type="submit" class="btn btn-success mt-3" [disabled]="contactForm.invalid">Enviar</button>
+        </div>
+      </div>
+
+      <div class="alert alert-success mt-4" formControlName="success" *ngIf="showMsg">
+        <p>Your message has send well. </p>
+
+      </div>
+    </form>
   </div>
-</form>
 </div>

@@ -1,0 +1,16 @@
+.door{
+  color: rgb(145, 55, 55);
+}
+.chat{
+  color: lightblue;
+}
+.mail{
+  color: rgb(226, 121, 121);
+}
+.group{
+  color: rgb(74, 175, 96);
+}
+
+.sidenavitem{
+  font-weight: 500;
+}

@@ -17,9 +17,7 @@ import { CharacterService } from 'src/app/services/character.service';
 export class PersonajesComponent implements OnInit {
 
   public allData: IResultados[]=[];
-
-  public filteredCharacters: IResultados [] = []
-
+  public filteredCharacters: IResultados [] = [];
   resultsLength=0;
 
   filterSearch:string="";
@@ -65,7 +63,6 @@ export class PersonajesComponent implements OnInit {
           return observableOf([]);
         })
       ).subscribe(data => this.allData = data)
-
   }
 
   onSearchClear(){

@@ -1,21 +1,37 @@
 <mat-nav-list>
   <a mat-list-item (click)="onsidenavClose()" [routerLink]="['/home']" >
-    <mat-icon>pan_tool</mat-icon>
-    <span>Home</span>
+    <mat-icon class="mr-2 door">sensor_door</mat-icon>
+    <span class="sidenavitem">Home</span>
   </a>
 
   <a mat-list-item (click)="onsidenavClose()" [routerLink]="['/characters']">
-    <mat-icon>dashboard</mat-icon>
-    <span>Characters</span>
+    <mat-icon class="mr-2 group">group</mat-icon>
+    <span class="sidenavitem">Characters</span>
   </a>
 
   <a mat-list-item (click)="onsidenavClose()" [routerLink]="['/social']">
-    <mat-icon>view_list</mat-icon>
-    <span>Social</span>
+    <mat-icon class="mr-2 chat">chat</mat-icon>
+    <span class="sidenavitem">Social</span>
   </a>
 
   <a mat-list-item (click)="onsidenavClose()" [routerLink]="['/contacto']">
-    <mat-icon>settings_phone</mat-icon>
-    <span>Contact</span>
+    <mat-icon class="mr-2 mail">email</mat-icon>
+    <span class="sidenavitem">Contact</span>
   </a>
+
+
+  <p class="mt-5 pl-3 font-weight-bold">Change language</p>
+  <a mat-list-item  >
+    <button class="btn btn-default"><img src="./assets/spanish_flag.png" alt="Spanish flag Icon" width="30"></button>Español
+  </a>
+  <a mat-list-item class="" >
+    <button class="btn btn-default" >
+      <img src="./assets/cat_flag.png" alt="Catalan flag Icon" width="30"></button>Català
+  </a>
+  <a mat-list-item class="" >
+    <button class="btn btn-default" >
+      <img src="./assets/uk_flag.png" alt="English flag Icon" width="30"></button>English
+  </a>
+
+
 </mat-nav-list>

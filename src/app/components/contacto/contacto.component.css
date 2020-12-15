@@ -1,0 +1,22 @@
+.content{
+  height: 95vh;
+  width: 100%;
+  background-image: url(social-bg2.png) ;
+  background-size: cover;
+  margin: 0px auto;
+}
+.container2{
+  height: 100%;
+  max-width: 800px;
+  margin:auto;
+}
+.text-danger{
+  background: rgba(255, 255, 255, 0.603);
+  margin-top: 7px;
+  padding: 8px;
+  width: fit-content;
+  border-radius: 5px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
